@@ -1,4 +1,6 @@
-export default function Head() {
+import React from 'react'
+
+export default function Head (): JSX.Element {
   return (
     <>
       <title>Create Next App</title>
