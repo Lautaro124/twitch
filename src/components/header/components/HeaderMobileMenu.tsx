@@ -1,7 +1,7 @@
 'use client'
+import Link from 'next/link'
 import React, { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-import Link from 'next/link'
 
 const links = [
   {
@@ -9,11 +9,11 @@ const links = [
     text: 'Home'
   },
   {
-    route: '/',
+    route: '/#live',
     text: 'Live channels'
   },
   {
-    route: '/',
+    route: '/#categories',
     text: 'Top categories'
   },
   {
@@ -47,15 +47,15 @@ function HeaderMobileMenu (): JSX.Element {
         <ul className='text-center w-3/4 bg-[#0e0e10] h-full flex flex-col justify-center items-center'>
           {isHidden}
           {links.map(link => (
-            <Link
-              onClick={() => { setHidden(false) }}
-              href={link.route}
-              key={link.text}
-            >
-              <li className='p-4 text-3xl font-bold'>
-                {link.text}
+              <li
+                key={link.text}
+                onClick={() => { setHidden(false) }}
+                className='p-4 text-3xl font-bold'
+              >
+                <Link href={link.route}>
+                  {link.text}
+                </Link>
               </li>
-            </Link>
           ))}
         </ul>
       </div>
