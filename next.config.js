@@ -5,7 +5,10 @@ const nextConfig = {
   },
   images: {
     domains: [
-      'robohash.org'
+      'avatars.githubusercontent.com',
+      'lh3.googleusercontent.com',
+      'robohash.org',
+      'static-cdn.jtvnw.net'
     ]
   }
 }

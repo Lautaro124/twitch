@@ -48,6 +48,7 @@ function HeaderMobileMenu (): JSX.Element {
           {isHidden}
           {links.map(link => (
             <Link
+              onClick={() => { setHidden(false) }}
               href={link.route}
               key={link.text}
             >
