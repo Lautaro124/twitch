@@ -1,4 +1,6 @@
 import React from 'react'
+import Categories from '~/components/categories/categories'
+import IconBar from '~/components/iconBar/iconBar'
 import LiveChannels from '~/components/liveChannels/liveChannles'
 
 export default function Home (): JSX.Element {
@@ -16,6 +18,8 @@ export default function Home (): JSX.Element {
         </div>
       </section>
       <LiveChannels />
+      <IconBar />
+      <Categories />
     </main>
   )
 }
